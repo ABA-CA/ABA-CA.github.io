@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "aba-ca",
+  "private_key_id": "cbfb31e8e2af087816156fe8f20f9cd121bdb2a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDYI0PfS74b87M+\n7TzKyiD6O5QcOrToYhnOBySAQ6YbG6Mg9EutCi0PjiCeOHaO9PcU11OFOV6ZIsKI\nWce1aAgfpeDrGBzVx6HaoJ5mzUlqymwhUouI56c8zjQqzX9cGRoSr62hEu+Am/FX\nrV9mjwfmTXTGtMTWWyug46DfbZtNTRZoax4NO7V2ROm1COvaGGBFppI6hE2mf8Bh\nrd32mvrBjJxoCKT4FjnorJmI1lrwRR51RMVtNVSWWtyVjLM19foHjIkjpy3kV1BD\nBccfLDGmKc6KmUavG2fAKOR4jEUy6Bq/cp+Lndoa32sQPVVpaK9DV05T+8nTxnvB\nt6J6J+nlAgMBAAECggEAZZJpDpJrRHqJxWw60fgceEwwZfXG16BmjRZ5NlfUQ1AB\nIPb9a1PpajJ6LLDPMo53YRFyHB0iUifuMKK0ghFiI/FR2lmKD4MSEorB9gDKXEfF\negFvNoba5m3nQSgyjobzZE2v9I7QA+oFCJWezDUyWq4Sz2DbUfslbSYcD3PUdIYE\njvpNuBB+UnEKUo7fbKhmo0nVply/lQ0mkiaaf+NCB19SrIkNUVJSLOmM03xMdewp\noApxtoqSOBK7K4c8dwfQvDPvxG2gTT3JO7HdU7d+YifLQAklIm3jl5a1eNBrtK3L\nthRwWmKsLL5cVEokV6QWqiT8tknEXQOzr/RWg/mvrwKBgQD7Gz85Meem0xk4JRO6\nHJzp45KtPXRWuV1s8q5aLqnzF7gcfDzKQv6FAFVq5MmDr7K6dyZ2WHr2NaHxP9ct\n/a3iEijjgoMohRqdnVujfiwayPZ2DkCAdi2aik+p6gxbAhMTut4gryKGbKvFNEPR\nso8YesBAzsw0dU6na1X2TxPJiwKBgQDcWY/Q8BtYPuP8tP2eZlXo/AnnY5r32LFV\nnw6jKuUU/aJC0e99T0KPR+xwwlJfNyhJTQMVrpL86tYkf8K+t2770Vvqv/I6yWCt\nTGeFj7IxEzPoUdGeRhp3acFMNypXdfBZpTGB5Hk+g7GDXfN7pR//ifcpnwQQcq/M\nGD14Lo0oTwKBgQCu0Cw2rDiCWmovPRi7s5nF9omxk5v/mDKjW1voKp5kPzoMkq1b\nfkJk43OT5E0qIVJDIBolv7ly2KmyI2ixeu7n+Q6APOcEeY2q9tbKPleEGi4CyC89\nf4iGEw4c03TgktQnIyvrAyH9BYCb3KPuQ+n899AKDi35w0ULpt0Eic7TuwKBgQCU\nOFqZPSnnrkZF0qlXR5c6ZW90CnhPh5+h7KA3+b6m5AWl1Pm33Pz0zHirUMt/6OZc\niEUu7INLRdxOKPKiv1kUYrvlqMAT8yno6KAqI4LFqBkeiQrr4FQlRyoTTnhY5KiM\nZKZsrXcxKfzaVPRXk7d2eSOdB64AMmU2cIfIs+eX2QKBgAPXtzRVFO7mLVAUOiTL\nak3ePjFslUM3fANeWPZg5UWzNW5jr+s+ew3vuzWpLsy6TgQfONNZaHLtzNcButAM\nJugfd/3qvMKfLwb1Tw+Ka3UFBJNBt7nuPSmgMhHkEgFLfyxSci5MHHYjLMZLUVa5\n4fOcJZkxgdyRFIS582YOXz9o\n-----END PRIVATE KEY-----\n",
+  "client_email": "admin-aba-ca@aba-ca.iam.gserviceaccount.com",
+  "client_id": "116462556072624150265",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/admin-aba-ca%40aba-ca.iam.gserviceaccount.com"
+}

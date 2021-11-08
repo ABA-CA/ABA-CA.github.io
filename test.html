@@ -121,12 +121,9 @@
           } else {
             appendPre('No data found.');
           }
-        }, function(response) {
           range.values[5][5] = 'hello';
-          console.log(response);
-          appendPre('Error: ' + response.result.error.message);
-        });
-        gapi.client.sheets.spreadsheets.values.update({
+
+          gapi.client.sheets.spreadsheets.values.update({
           spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
           range: 'Class Data!A2:E',
           valueInputOption: 'USER_ENTERED',
@@ -137,6 +134,10 @@
 
           console.log(response);
 
+        });
+        }, function(response) {
+          console.log(response);
+          appendPre('Error: ' + response.result.error.message);
         });
 
 

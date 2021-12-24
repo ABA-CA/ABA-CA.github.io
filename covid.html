@@ -1,0 +1,182 @@
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="./styles/form.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+<script async defer src="./scripts/google.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+<div style="background-color:black;width: 100%;" class="topnav">
+  <li>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a class="active" href="covid.html">Uploadd</a>
+      <a id="authorize_button" style="display: none;">Log In</a>
+      <a id="signout_button" style="display: none;">Log Out</a>
+  </li>
+</div>
+
+<h1 class="form title">
+  Upload Covid Info
+</h1>
+<div class='form'>
+  <label class="space" for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+
+  <label  class="space" for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+
+  <label class="space" for="gender">Gender:</label>
+  <input type="text" id="gender" name="gender"><br><br>
+
+  <label class="space" for="DOB">DOB:</label>
+  <input type="date" id="DOB" name="DOB"><br><br>
+
+  <label class="space" for="Year">School Year:</label>
+  <input type="number" id="school-year" name="school year"><br><br>
+    
+  <p class="radio-questions">What Class are you currently in?</p>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label class="space2" for="Year">A:</label>
+      <input type="radio" id="class" name="Class" value="A"><br><br>
+    </div> 
+    <div class="col-sm-4">
+      <label class="space2" for="Year">B:</label>
+      <input type="radio" id="class" name="Class" value="B"><br><br>
+    </div>
+    <div class="col-sm-4">
+      <label class="space2" for="Year">C:</label>
+      <input type="radio" id="class" name="Class" value="C"><br><br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label class="space2" for="Year">D:</label>
+      <input type="radio" id="class" name="Class" value="D"><br><br>
+    </div>
+    <div class="col-sm-4">
+      <label class="space2" for="Year">E:</label>
+      <input type="radio" id="class" name="Class" value="E"><br><br>
+    </div>
+    <div class="col-sm-4">
+    <label class="space2" for="Year">F:</label>
+      <input type="radio" id="class" name="Class" value="F"><br><br>
+    </div>
+  </div> 
+
+  <label class="space" for="EmiratesID">Emirates ID:</label>
+  <input type="tel" id="emiratesId" name="ID"><br><br>
+
+  <p class="radio-questions">Vaccine #1</p>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Moderna</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Moderna'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Pfizer-BioNTech</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Pfizer-BioNTech'><br><br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Johnson & Johnson</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Johnson & Johnson'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Oxford/AstraZeneca</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Oxford/AstraZenec'><br><br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Covishield</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Covishield'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Sinopharm</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Sinopharm'><br><br>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Sinovac</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='Sinovac'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Other</label>
+      <input type="radio" id='vaccine#1' name='vaccine#1' value='other'><br><br>
+    </div>
+  </div>
+  <p class="radio-questions">Vaccine #2</p>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Moderna</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Moderna'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Pfizer-BioNTech</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Pfizer-BioNTech'><br><br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Johnson & Johnson</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Johnson & Johnson'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Oxford/AstraZeneca</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Oxford/AstraZenec'><br><br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Covishield</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Covishield'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Sinopharm</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Sinopharm'><br><br>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="space2" for="type">Sinovac</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='Sinovac'><br><br>
+    </div>
+    <div class="col-sm-6">
+      <label class="space2" for="type">Other</label>
+      <input type="radio" id='vaccine#2' name='vaccine#2' value='other'><br><br>
+    </div>
+  </div>
+
+  <label class="space" for="type">If chosen other explain:</label>
+  <input type="text" id="otherExplanation" name="type"><br><br>
+  
+   <label class="space" for="type">Date of Vaccine 1:</label>
+  <input type="date" id="datevaccine1" name="datevaccine1"><br><br>
+  
+  <label class="space" for="type">Date of Vaccine 2:</label>
+  <input type="date" id="datevaccine2" name="datevaccine2"><br><br>
+  
+  <label class="space" for="type">Date of Vaccine booster:</label>
+  <input type="date" id="datevaccineb" name="datevaccineb"><br><br>
+
+	<imput type="text">
+  <button id='submit'>submit</button>
+</div>
+
+<br>
+<br>
+<br>

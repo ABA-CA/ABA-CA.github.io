@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+<script async defer src="./scripts/google.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
 <style>
 body {
     background-color: rgb(255, 255, 255);
@@ -85,13 +88,14 @@ h7{
 
 
 <div style="background-color:black;width: 100%;" class="topnav">
-    <li>
-    <a class="active" href="index.html">Home</a>
-    <a href="Upload.html">Upload</a>
-    <a href="Sign up.html">Sign up</a>
-    <a href="Login.html">Login</a>
-    </li>
-  </div>
+  <li>
+      <a href="index.html">Home</a>
+      <a class="active" href="upload.html">Upload</a>
+      <a href="covid.html">Uploadd</a>
+      <a id="authorize_button" style="display: none;">Log In</a>
+      <a id="signout_button" style="display: none;">Log Out</a>
+  </li>
+</div>
 
   
 <h1 class="title"> Here is where you will upload your Covid results </h1>

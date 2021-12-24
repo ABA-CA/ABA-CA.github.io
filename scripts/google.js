@@ -88,7 +88,7 @@ function listMajors() {
       range: 'Class Data!A3:K3',
       valueInputOption: 'USER_ENTERED',
       resource: {
-        values: ['hello', 'mo'],
+        values: [['hello', 'mo']],
       }
     }).then(function (response) {
 

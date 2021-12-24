@@ -188,7 +188,7 @@ function checkAllValues() {
     values: [
       fname,
       lname,
-      classValue,
+      classValue.value,
       gender,
       DOB,
       schoolYear,

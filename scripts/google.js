@@ -79,13 +79,13 @@ function updateSheet(values) {
   if (values == null) return;
   gapi.client.sheets.spreadsheets.values.get({
     spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
-    range: 'Class Data!A2:K200',
+    range: 'Class Data!A2:L200',
   }).then(function (response) {
     var range = response.result;
     range.values.push(values);
     gapi.client.sheets.spreadsheets.values.update({
       spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
-      range: 'Class Data!A2:K200',
+      range: 'Class Data!A2:L200',
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: range.values,

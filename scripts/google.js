@@ -81,7 +81,6 @@ function updateSheet(values) {
     spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
     range: 'Class Data!A2:K200',
   }).then(function (response) {
-    console.log(response);
     var range = response.result;
     range.values.push(values);
     gapi.client.sheets.spreadsheets.values.update({
@@ -92,9 +91,8 @@ function updateSheet(values) {
         values: range.values,
       }
     }).then(function (response) {
-
       console.log(response);
-
+      document.getElementById('form').style.display = 'none';
     });
   }, function (response) {
     console.log(response);
@@ -109,7 +107,7 @@ document.getElementById("submit").onclick = () => {
     return;
   }
   console.log(check.values);
-  updateSheet(check.values)
+  updateSheet(check.values);
   console.log(check);
 }
 
@@ -183,12 +181,14 @@ function checkAllValues() {
     errorMessage += '(datevaccineb)'
     isError = true;
   }
+
   return {
     error: isError,
     message: errorMessage,
     values: [
       fname,
       lname,
+      classValue,
       gender,
       DOB,
       schoolYear,

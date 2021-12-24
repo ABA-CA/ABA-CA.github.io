@@ -50,7 +50,7 @@ function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = 'none';
     signoutButton.style.display = 'block';
-    listMajors();
+    updateSheet();
   } else {
     authorizeButton.style.display = 'block';
     signoutButton.style.display = 'none';
@@ -75,14 +75,14 @@ function handleSignoutClick(event) {
  * Print the names and majors of students in a sample spreadsheet:
  * https://docs.google.com/spreadsheets/d/1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY/edit
  */
-function listMajors() {
+function updateSheet(values) {
   gapi.client.sheets.spreadsheets.values.get({
     spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
     range: 'Class Data!A2:K200',
   }).then(function (response) {
     console.log(response);
     var range = response.result;
-    range.values.push(['hello', 'mo'])
+    range.values.push(values);
     gapi.client.sheets.spreadsheets.values.update({
       spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
       range: 'Class Data!A2:K200',
@@ -105,10 +105,12 @@ document.getElementById("submit").onclick = () => {
   const check = checkAllValues();
   if (check.error) {
     alert(check.message)
+    return;
   }
-
+  listMajors(check.values)
   console.log(check);
 }
+
 function checkAllValues() {
   const classValue = document.querySelector('input[name="Class"]:checked');
   const fname = document.getElementById('fname').value;
@@ -182,16 +184,19 @@ function checkAllValues() {
   return {
     error: isError,
     message: errorMessage,
-    fname,
-    lname,
-    gender,
-    DOB,
-    schoolYear,
-    emiratesId,
-    vaccine1,
-    vaccine2,
-    datevaccine1,
-    datevaccine2,
-    datevaccineb,
+    values: [
+      errorMessage,
+      fname,
+      lname,
+      gender,
+      DOB,
+      schoolYear,
+      emiratesId,
+      vaccine1,
+      vaccine2,
+      datevaccine1,
+      datevaccine2,
+      datevaccineb,
+    ]
   };
 }

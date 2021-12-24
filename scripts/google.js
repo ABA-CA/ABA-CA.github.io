@@ -76,6 +76,7 @@ function handleSignoutClick(event) {
  * https://docs.google.com/spreadsheets/d/1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY/edit
  */
 function updateSheet(values) {
+  if (values == null) return;
   gapi.client.sheets.spreadsheets.values.get({
     spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
     range: 'Class Data!A2:K200',
@@ -107,7 +108,7 @@ document.getElementById("submit").onclick = () => {
     alert(check.message)
     return;
   }
-  listMajors(check.values)
+  updateSheet(check.values)
   console.log(check);
 }
 

@@ -83,10 +83,10 @@ function listMajors() {
     console.log(response);
     var range = response.result;
     console.log('range', range);
-    // range.values.push(['hello', 'mo'])
+    range.values.push(['hello', 'mo'])
     gapi.client.sheets.spreadsheets.values.update({
       spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
-      range: 'Class Data!A2:E',
+      range: 'Class Data!A2:K2',
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: range.values,

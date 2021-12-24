@@ -93,6 +93,7 @@ function updateSheet(values) {
     }).then(function (response) {
       console.log(response);
       document.getElementById('form').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
     });
   }, function (response) {
     console.log(response);

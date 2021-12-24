@@ -108,6 +108,7 @@ document.getElementById("submit").onclick = () => {
     alert(check.message)
     return;
   }
+  console.log(check.values);
   updateSheet(check.values)
   console.log(check);
 }

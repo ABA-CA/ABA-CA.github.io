@@ -39,7 +39,6 @@ function initClient() {
     signoutButton.onclick = handleSignoutClick;
   }, function (error) {
     console.log(error);
-    appendPre(JSON.stringify(error, null, 2));
   });
 }
 
@@ -73,18 +72,6 @@ function handleSignoutClick(event) {
 }
 
 /**
- * Append a pre element to the body containing the given message
- * as its text node. Used to display the results of the API call.
- *
- * @param {string} message Text to be placed in pre element.
- */
-function appendPre(message) {
-  var pre = document.getElementById('content');
-  var textContent = document.createTextNode(message + '\n');
-  pre.appendChild(textContent);
-}
-
-/**
  * Print the names and majors of students in a sample spreadsheet:
  * https://docs.google.com/spreadsheets/d/1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY/edit
  */
@@ -96,16 +83,6 @@ function listMajors() {
     console.log(response);
     var range = response.result;
     console.log('range', range);
-    if (range.values.length > 0) {
-      appendPre('Name, Major:');
-      for (i = 0; i < range.values.length; i++) {
-        var row = range.values[i];
-        // Print columns A and E, which correspond to indices 0 and 4.
-        appendPre(row[0] + ', ' + row[4]);
-      }
-    } else {
-      appendPre('No data found.');
-    }
     range.values.push(['hello', 'mo'])
     gapi.client.sheets.spreadsheets.values.update({
       spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
@@ -121,7 +98,6 @@ function listMajors() {
     });
   }, function (response) {
     console.log(response);
-    appendPre('Error: ' + response.result.error.message);
   });
 
 }

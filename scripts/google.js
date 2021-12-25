@@ -31,6 +31,7 @@ function initClient() {
     scope: SCOPES
   }).then(function (data) {
     // Listen for sign-in state changes.
+    console.log('some-data', data);
     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
     // Handle the initial sign-in state.

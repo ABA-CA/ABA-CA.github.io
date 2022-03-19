@@ -1,19 +1,21 @@
-// Client ID and API key from the Developer Console
+// Client ID and API key
+// Allows you to use google API
 var CLIENT_ID = '217647880824-ot6cfpn1vnoa012lcsuacsct6vkk0qj2.apps.googleusercontent.com';
 var API_KEY = 'AIzaSyBQMvZUeeyezuXdcBBCmBVZDOiiDFeVTfs';
 
-// Array of API discovery doc URLs for APIs used by the quickstart
+// Version of the Google Api you are using
 var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
 
-// Authorization scopes required by the API; multiple scopes can be
-// included, separated by spaces.
+// Authorization scopes ~ What your APIs are allowed to access
 var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
+// Gets authorize Button from html page
 var authorizeButton = document.getElementById('authorize_button');
+// Gets signout Button from html page
 var signoutButton = document.getElementById('signout_button');
 
 /**
- *  On load, called to load the auth2 library and API client library.
+ *  Loads API helper
  */
 function handleClientLoad() {
   gapi.load('client:auth2', initClient);
@@ -22,6 +24,7 @@ function handleClientLoad() {
 /**
  *  Initializes the API client library and sets up sign-in state
  *  listeners.
+ *  Creates the Google API class and calls sign in
  */
 function initClient() {
   gapi.client.init({
@@ -49,12 +52,12 @@ function initClient() {
  */
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    authorizeButton.style.display = 'none';
-    signoutButton.style.display = 'block';
+    authorizeButton.style.display = 'none'; // hide auth button
+    signoutButton.style.display = 'block'; // show sign out button
     updateSheet();
   } else {
-    authorizeButton.style.display = 'block';
-    signoutButton.style.display = 'none';
+    authorizeButton.style.display = 'block'; // show auth button
+    signoutButton.style.display = 'none'; // hide sign out button
   }
 }
 
@@ -78,12 +81,16 @@ function handleSignoutClick(event) {
  */
 function updateSheet(values) {
   if (values == null) return;
+
+  // Get all the data from the sheets
   gapi.client.sheets.spreadsheets.values.get({
     spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
     range: 'Class Data!A2:L200',
   }).then(function (response) {
     var range = response.result;
     range.values.push(values);
+
+    // This will update the sheet with the form data you put in.
     gapi.client.sheets.spreadsheets.values.update({
       spreadsheetId: '1nkvk4K0k7ZU2MEh_8Yt7Tb1Q6zUqKbaorR7cOaM_RUY',
       range: 'Class Data!A2:L200',
@@ -101,18 +108,22 @@ function updateSheet(values) {
   });
 
 }
+
+// SUBMIT FORM
 document.getElementById("submit").onclick = () => {
 
+  // check values
   const check = checkAllValues();
   if (check.error) {
-    alert(check.message)
+    alert(check.message) // alert if there are errors
     return;
   }
   console.log(check.values);
-  updateSheet(check.values);
+  updateSheet(check.values); // successful then update google sheet
   console.log(check);
 }
 
+// Checks the form if they completed it. If its not completed it will alert the page
 function checkAllValues() {
   const classValue = document.querySelector('input[name="Class"]:checked');
   const fname = document.getElementById('fname').value;

@@ -22,20 +22,21 @@
   </li>
 </div>
 
-<h1 class="form title">
-  Upload PCR results
-</h1>
-    
-<p>Click on the "Choose File" button to upload PCR test Results:</p>
-
+<form 
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbz901N9QHxVCIywxTK3fHYLA4hDLYfgoZA89ZG9Esnv72EImU__FmuVsZRUhyzQFPGl/exec"
+>
+  <p>Click on the "Choose File" button to upload PCR test Results:</p>
+  
   <div class="row">
     <div class="col-sm-6">
       <label class="space2" for="type">upload</label>
 <form action="/action_page.php">
   <input type="file" id="myFile" name="filename">
-</form>
+  <button type="submit">Send</button>
+  </form>
 </div>
-</div>	
-
+</div>
+  
 </body>
 </html>

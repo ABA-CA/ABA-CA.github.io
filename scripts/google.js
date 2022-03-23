@@ -32,7 +32,7 @@ function initClient() {
     clientId: CLIENT_ID,
     discoveryDocs: DISCOVERY_DOCS,
     scope: SCOPES
-  }).then(function (data) {
+  }).then(function (data) { 
     // Listen for sign-in state changes.
     console.log('some-data', data);
     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
